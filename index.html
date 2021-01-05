@@ -1,15 +1,97 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicholas Cable">
+    <meta name="description" content="This is an introductory website about
+    myself, as well as will contain links to my other assignments for WDD 230
+    for the Winter 2021 Semester at BYU-Idaho">
     <title>Welcome</title>
-</head>
-<body>
-    <h2>Start of the New Document</h2>
-    <p>This is the start of this new class, which is WDD 230.</p>
+    <script>
+        // this script is to dynamically add the last modified date
+        // to the copyright value and the correct year
 
-    <h3>More Stuff to See</h3>
-    
+        function times() {
+            var year = new Date().getFullYear();
+            var output = '&#169; ' + year;
+
+            var date = new Date(document.lastModified);
+            var last_modified = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+            
+
+            var f_ln = document.getElementById('copyright');
+            f_ln.innerHTML = output + f_ln.innerHTML;
+
+            var s_ln = document.getElementById('update_date');
+            s_ln.innerHTML = 'Last Updated: ' + last_modified;
+        }
+
+    </script>
+
+    <style>
+        body {
+            max-width: 50%;
+        }
+
+        .heading {
+            text-align: center;
+            color: white;
+            background-color: red;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            background-color: red;
+            border-radius: 15px;
+            padding: 5px;
+            margin: 50px 15px 15px;
+        }
+
+        h2 {
+            max-width: 90%;
+            border-bottom: solid;
+        }
+
+        .opening {
+            text-align: left;
+            margin-left: 5%;
+        }
+
+        #selfie {
+            float: right;
+            width: 25%;
+            height: 30%;
+        }
+
+    </style>
+</head>
+
+<body onload="times()">
+    <div class="heading">
+        <h1>Nicholas Cable</h1>
+        <img src="profile.JPG" alt="Picture of myself" id="selfie">
+    </div>
+    <div class="opening">
+        
+        <h2>WDD 230: Links to Future Assignments</h2>
+        <ul>
+            <li><a href='https://www.w3schools.com/html/html_links.asp' target="_blank">Some Content</a></li>
+            <li><a href='https://www.w3schools.com/html/html_links.asp' target="_blank">Some Content</a></li>
+            <li><a href='https://www.w3schools.com/html/html_links.asp' target="_blank">Some Content</a></li>
+        </ul>
+
+    </div>
+    <div class="footer">
+        <p id="copyright"> | Nicholas Cable | Idaho | <a href="https://www.byui.edu/online">BYUI Online Learning</a></p>
+        <p id="update_date"></p>
+    </div>
+
 </body>
+
 </html>
