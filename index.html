@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nicholas Cable">
     <meta name="description" content="This is an introductory website about
-    myself, as well as will contain links to my other assignments for WDD 230
-    for the Winter 2021 Semester at BYU-Idaho">
+        myself, as well as will contain links to my other assignments for WDD 230
+        for the Winter 2021 Semester at BYU-Idaho">
     <title>Welcome</title>
     <script>
         // this script is to dynamically add the last modified date
@@ -19,7 +19,7 @@
 
             var date = new Date(document.lastModified);
             var last_modified = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
-            
+
 
             var f_ln = document.getElementById('copyright');
             f_ln.innerHTML = output + f_ln.innerHTML;
@@ -40,7 +40,7 @@
             color: white;
             background-color: red;
             border-radius: 15px;
-            padding: 25px;
+            padding: 10px;
             margin: 25px;
         }
 
@@ -50,7 +50,7 @@
             background-color: red;
             border-radius: 15px;
             padding: 5px;
-            margin: 50px 15px 15px;
+            margin: 25% 15px 15px;
         }
 
         h2 {
@@ -63,10 +63,15 @@
             margin-left: 5%;
         }
 
+        .heading h1 {
+            display: inline;
+            margin: 5px;
+        }
+
         #selfie {
             float: right;
-            width: 25%;
-            height: 30%;
+            width: 17.5%;
+            height: 22.5%;
         }
 
     </style>
@@ -78,7 +83,7 @@
         <img src="profile.JPG" alt="Picture of myself" id="selfie">
     </div>
     <div class="opening">
-        
+
         <h2>WDD 230: Links to Future Assignments</h2>
         <ul>
             <li><a href='https://www.w3schools.com/html/html_links.asp' target="_blank">Some Content</a></li>
