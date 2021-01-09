@@ -18,8 +18,7 @@
             var output = '&#169; ' + year;
 
             var date = new Date(document.lastModified);
-            var last_modified = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
-
+            var last_modified = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
 
             var f_ln = document.getElementById('copyright');
             f_ln.innerHTML = output + f_ln.innerHTML;
@@ -38,7 +37,7 @@
         .heading {
             text-align: center;
             color: white;
-            background-color: red;
+            background-color: #b8111a;
             border-radius: 15px;
             padding: 10px;
             margin: 25px;
@@ -47,10 +46,11 @@
         .footer {
             text-align: center;
             color: white;
-            background-color: red;
+            background-color: #b8111a;
             border-radius: 15px;
             padding: 5px;
             margin: 25% 15px 15px;
+            font-size: 105%;
         }
 
         h2 {
@@ -74,6 +74,15 @@
             height: 22.5%;
         }
 
+        #byui_learn {
+            color: rgb(192, 192, 192);
+        }
+
+        a:hover, #byui_learn:hover {
+            /* background-color: rgb(194, 194, 194); */
+            color: blue;
+        }
+
     </style>
 </head>
 
@@ -93,7 +102,7 @@
 
     </div>
     <div class="footer">
-        <p id="copyright"> | Nicholas Cable | Idaho | <a href="https://www.byui.edu/online">BYUI Online Learning</a></p>
+        <p id="copyright"> | Nicholas Cable | Idaho | <a id='byui_learn' href="https://www.byui.edu/online">BYUI Online Learning</a></p>
         <p id="update_date"></p>
     </div>
 
