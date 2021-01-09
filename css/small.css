@@ -7,7 +7,6 @@ body {
     text-align: center;
     color: white;
     background-color: #b8111a;
-    border-radius: 15px;
     padding: 10px;
     margin: 25px;
 }
@@ -16,7 +15,6 @@ body {
     text-align: center;
     color: white;
     background-color: #b8111a;
-    border-radius: 15px;
     padding: 5px;
     margin: 25% 15px 15px;
     font-size: 105%;
@@ -38,9 +36,8 @@ h2 {
 }
 
 #selfie {
-    float: right;
-    width: 17.5%;
-    height: 22.5%;
+    width: 40%;
+    height: 50%;
 }
 
 #byui_learn {
