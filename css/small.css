@@ -3,7 +3,7 @@ body {
     font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
 }
 
-.heading {
+header {
     text-align: center;
     color: white;
     background-color: #b8111a;
@@ -11,7 +11,7 @@ body {
     margin: 25px;
 }
 
-.footer {
+footer {
     text-align: center;
     color: white;
     background-color: #b8111a;
@@ -30,7 +30,7 @@ h2 {
     margin-left: 5%;
 }
 
-.heading h1 {
+header h1 {
     display: inline;
     margin: 5px;
 }

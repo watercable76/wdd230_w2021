@@ -8,6 +8,6 @@
         height: 22.5%;
     }
 
-    .heading, .footer {border-radius: 15px;}
+    header, footer {border-radius: 15px;}
 
 }
