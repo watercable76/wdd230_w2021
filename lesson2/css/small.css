@@ -1,0 +1,22 @@
+body {
+    max-width: 80%;
+    font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
+    margin-left: 5%;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: #b8111a;
+    padding: 10px;
+    margin: 25px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: #b8111a;
+    padding: 5px;
+    margin: 25% 15px 15px;
+    font-size: 105%;
+}
