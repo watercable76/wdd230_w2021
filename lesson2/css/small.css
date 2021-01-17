@@ -1,7 +1,6 @@
 body {
     max-width: 80%;
     font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
-    margin-left: 5%;
 }
 
 header {
@@ -19,4 +18,29 @@ footer {
     padding: 5px;
     margin: 25% 15px 15px;
     font-size: 105%;
+}
+
+main {
+    max-width: 767px;
+    margin-left: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 0.8rem;
+}
+
+main section {
+    margin: 0.5rem;
+    border: 1px solid #bbb;
+    padding: 30px 1rem;
+    background-color: #eee;
+    height: fit-content;
+}
+
+main section:nth-child(2) {
+    margin: 0.5rem;
+}
+
+.card_img {
+    width: 75%;
+    height: 75%;
 }
