@@ -22,7 +22,7 @@ footer {
 
 main {
     max-width: 767px;
-    margin-left: 0 auto;
+    margin-left: 5%;
     display: grid;
     grid-template-columns: 1fr;
     font-size: 0.8rem;
