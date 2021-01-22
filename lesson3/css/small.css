@@ -1,0 +1,70 @@
+/* Nav formatting */
+nav {
+    overflow: hidden;
+    background-color: gray;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+nav a {
+    float: left;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+nav a.active {
+    background-color: #666;
+    color: white;
+}
+
+body {
+    max-width: 80%;
+    font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
+}
+
+header {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 25px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: gray;
+    padding: 5px;
+    margin: 25% 15px 15px;
+    font-size: 105%;
+}
+
+.w-line {
+    max-width: 90%;
+    border-bottom: solid;
+}
+
+main {
+    text-align: left;
+    margin-left: 5%;
+    max-width: 90%;
+}
+
+header h1 {
+    display: inline;
+    margin: 5px;
+}
+
+/* Logo formatting */
+.logo {
+    display: flex;
+    width: 15%;
+    height: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2%;
+}
