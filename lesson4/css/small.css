@@ -30,23 +30,25 @@ body {
 }
 
 header, footer {
-    display: flex;
     flex-flow: column;
     text-align: center;
-    color: white;
 }
 
 header {
+    display: block;
     padding: 10px;
     margin: 0;
 }
 
+
 footer {
+    display: flex;
     background-color: gray;
     padding: 5px;
     font-size: 0.9rem;
     margin-top: 10%;
     margin-left: 5%;
+    color: white;
 }
 
 main {

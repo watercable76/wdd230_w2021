@@ -5,6 +5,8 @@
     footer {
         border-radius: 15px;
         margin: 15% 15px 15px;
+        padding: 10px;
+        font-size: 105%;
     }
 
     main {
@@ -19,11 +21,6 @@
     nav a {
         float: left;
         padding: 14px 20px;
-        font-size: 105%;
-    }
-
-    footer {
-        padding: 5px;
         font-size: 105%;
     }
 
