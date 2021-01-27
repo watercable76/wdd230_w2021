@@ -35,9 +35,13 @@ header, footer {
 }
 
 header {
-    display: block;
+    /* display: block; */
     padding: 10px;
     margin: 0;
+}
+
+header .logo, header .header_div {
+    display: inline-block;
 }
 
 
@@ -69,7 +73,8 @@ footer p {
 
 /* Logo formatting */
 .logo {
-    display: flex;
+    /* display: flex; */
+    /* float: left; */
     width: 15%;
     height: 15%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
