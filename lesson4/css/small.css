@@ -24,6 +24,21 @@ nav a.active {
     color: white;
 }
 
+/* Formatting for responsive menu */
+
+.navigation a:first-child {
+    display: block;
+}
+
+/* remove all other elements besides first one */
+.navigation a {
+    display: none;
+}
+
+.responsive a {
+    display: block;
+}
+
 body {
     max-width: 80%;
     font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;

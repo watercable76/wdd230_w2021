@@ -24,6 +24,18 @@
         font-size: 105%;
     }
 
+    .navigation {
+        display: flex;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    .navigation a:first-child {
+        display: none;
+    }
+
     .logo {
         height: 175px;
         width: 175px;
