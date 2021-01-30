@@ -7,7 +7,17 @@ nav {
     top: 0;
     margin-left: 5%;
 }
-nav a {
+.navigation {
+	list-style: none;
+	padding: 0;
+}
+.navigation li:first-child {
+	display: block;
+}
+.navigation li {
+	display: none;
+}
+.navigation a {
     display: block;
     color: white;
     text-align: center;
@@ -15,30 +25,17 @@ nav a {
     text-decoration: none;
     font-size: 0.9rem;
 }
-nav a:hover {
+.navigation a:hover {
     background-color: #ddd;
     color: black;
 }
-nav a.active {
-    background-color: #666;
-    color: white;
+
+.responsive li {
+	display: block;
 }
 
-/* Formatting for responsive menu */
 
-.navigation a:first-child {
-    display: block;
-}
-
-/* remove all other elements besides first one */
-.navigation a {
-    display: none;
-}
-
-.responsive a {
-    display: block;
-}
-
+/* Non-nav styling */
 body {
     max-width: 80%;
     font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;

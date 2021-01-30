@@ -13,28 +13,23 @@
         font-size: 1.2rem;
     }
 
-    nav {
-        padding: 10px 10px;
-        margin: 25px;
-    }
-
-    nav a {
+    nav ul li a {
         float: left;
-        padding: 14px 20px;
-        font-size: 105%;
+        /* padding: 10px 15px; */
+        font-size: 1.4rem;
+        margin-left: 10%;
     }
-
     .navigation {
-        display: flex;
+		display: flex;
+	}
+	.navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 auto;
     }
-
-    .navigation a {
-        display: block;
-    }
-
-    .navigation a:first-child {
-        display: none;
-    }
+    
+	.navigation li:first-child {
+		display: none;
+	}
 
     .logo {
         height: 175px;

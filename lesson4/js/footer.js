@@ -73,17 +73,12 @@ function current_date() {
     document.getElementById('cur_date').innerHTML = `${day}, ${date} ${month} ${year}`;
 }
 
-// window.onload = function() {
-// Add event listener to make menu reponsive when small page
-const nav_button = document.querySelector('.menu_drop');
-const nav_area = document.querySelector('.navigation');
+function button_magic() {
+    const hambutton = document.querySelector('.ham');
+    const mainnav = document.querySelector('.navigation')
 
-// if user clicks on menu, set responsive class
-nav_button.addEventListener('click', () => { nav_area.classList.toggle('responsive') }, false);
+    hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
 
-// remove responsive class if window is medium sized
-window.onresize = () => {
-    if (window.innerWidth > 760)
-        nav_area.classList.remove('responsive')
-};
-// }
+    // To solve the mid resizing issue with responsive class on
+    window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
+}
