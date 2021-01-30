@@ -5,7 +5,7 @@ nav {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    margin-left: 5%;
+    /* margin-left: 5%; */
 }
 .navigation {
 	list-style: none;
@@ -37,7 +37,7 @@ nav {
 
 /* Non-nav styling */
 body {
-    max-width: 80%;
+    /* max-width: 80%; */
     font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
 }
 
@@ -50,6 +50,8 @@ header {
     /* display: block; */
     padding: 10px;
     margin: 0;
+    background-color: rgba(168, 162, 162, 0.918);
+    color: white;
 }
 
 header .logo, header .header_div {
@@ -63,7 +65,7 @@ footer {
     padding: 5px;
     font-size: 0.9rem;
     margin-top: 10%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     color: white;
 }
 
@@ -91,11 +93,4 @@ footer p {
     height: 15%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 2%;
-}
-
-.palettes {
-    /* width: 150px;
-    height: 150px; */
-    width: 50%;
-    height: auto;
 }
