@@ -4,9 +4,11 @@
 
     footer {
         border-radius: 15px;
-        margin: 15% 15px 15px;
         padding: 10px;
         font-size: 105%;
+        max-width: 90%;
+        /* Top horizontal bottom */
+        margin: 15% auto 2%;
     }
 
     main {
