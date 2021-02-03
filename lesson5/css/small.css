@@ -76,8 +76,7 @@ footer {
     background-color: gray;
     padding: 5px;
     font-size: 0.9rem;
-    margin-top: 10%;
-    /* margin-left: 5%; */
+    margin-top: 0;
     color: white;
 }
 
@@ -85,10 +84,24 @@ footer p {
     margin: 5px;
 }
 
+.map_div {
+    overflow: hidden;
+    background-color: rgb(161, 159, 159);
+    padding: 15px;
+    text-align: center;
+}
 
-#map_img, #fall_img {
-    height: 25%;
-    width: 25%;
+
+#map_img {
+    display: none;
+}
+
+
+/* Top div formatting */
+.top_div {
+    background-color: gray;
+    position: relative;
+    margin-bottom: 5%;
 }
 
 #winter_img {
@@ -96,12 +109,54 @@ footer p {
     width: 100%;
 }
 
+.w_summary {
+    font-size: 0.6rem;
+    color: white;
+    background-color: rgb(18, 18, 216);
+    float: left;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+/* five day forecast formatting */
+.five_day_forecast {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: none;
+}
+
+.five_day_forecast table {
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+}
+
+table, th{
+    border: 1px solid black;
+}
+
+table tr:first-child {
+    background-color: blue;
+}
+
+th {
+    padding: 5px;
+}
+
+/* article formatting */
 .article_div {
     background-color: rgb(161, 159, 159);
     border: black;
     padding: 10px;
     /* display: block; */
     float: none;
+}
+
+#fall_img {
+    height: 25%;
+    width: 25%;
 }
 
 /* banner formatting */
