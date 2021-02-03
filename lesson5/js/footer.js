@@ -82,3 +82,18 @@ function button_magic() {
     // To solve the mid resizing issue with responsive class on
     window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
 }
+
+function banner_top() {
+    var d = new Date();
+    var day = d.getDay();
+
+    const banner = document.getElementById('banner_div');
+
+    if(day == 5) {
+        banner.style.display = "block";
+    }
+    else {
+        banner.style.display = "none";
+    }
+
+}
