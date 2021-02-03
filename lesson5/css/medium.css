@@ -9,7 +9,20 @@
         max-width: 90%;
         /* Top horizontal bottom */
         margin: 15% auto 2%;
+    }
 
+    .footer_div {
+        display: inline;
+    }
+
+    .contact_info {
+        float: right;
+        margin-right: 10%;
+    }
+
+    #map_img {
+        float: left;
+        margin-left: 10%;
     }
 
     main {
@@ -37,6 +50,15 @@
     .logo {
         height: 175px;
         width: 175px;
+    }
+
+    /* article formatting */
+    .article_div {
+        overflow: auto;
+    }
+    
+    #fall_img {
+        float: right;
     }
 
 }
