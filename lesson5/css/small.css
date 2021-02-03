@@ -81,6 +81,15 @@ footer p {
 }
 
 
+#map_img {
+    height: 25%;
+    width: 25%;
+}
+
+#winter_img {
+    height: 10%;
+    width: 100%;
+}
 
 
 /* Logo formatting */
