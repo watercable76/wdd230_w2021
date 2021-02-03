@@ -34,6 +34,10 @@ nav {
     color: black;
 }
 
+.navigation a:active {
+    color:pink;
+}
+
 .responsive li {
 	display: block;
 }
@@ -81,7 +85,7 @@ footer p {
 }
 
 
-#map_img {
+#map_img, #fall_img {
     height: 25%;
     width: 25%;
 }
@@ -89,6 +93,12 @@ footer p {
 #winter_img {
     height: 10%;
     width: 100%;
+}
+
+.article_div {
+    background-color: rgb(161, 159, 159);
+    border: black;
+    padding: 10px;
 }
 
 
