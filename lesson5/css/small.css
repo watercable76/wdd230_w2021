@@ -107,13 +107,19 @@ footer p {
 }
 
 .w_summary {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: white;
-    background-color: rgb(18, 18, 216);
+    padding: 5px;
+    background-color: #1985a1;
     float: left;
     position: absolute;
     top: 5px;
     left: 10px;
+}
+
+.w_summary h3 {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
 }
 
 /* five day forecast formatting */
@@ -135,7 +141,7 @@ table, th{
 }
 
 table tr:first-child {
-    background-color: blue;
+    background-color: #1985a1;
 }
 
 th {
@@ -153,7 +159,7 @@ th {
 
 #fall_img {
     height: 25%;
-    width: 25%;
+    width: 35%;
 }
 
 /* banner formatting */

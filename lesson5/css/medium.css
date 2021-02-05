@@ -66,6 +66,7 @@
     /* article formatting */
     .article_div {
         overflow: auto;
+        display: flex;
     }
     
     #fall_img {
@@ -75,6 +76,11 @@
     #winter_img {
         width: 100%;
         height: 2.5%;
+    }
+
+    .w_summary {
+        font-size: 0.8rem;
+        padding: 15px;
     }
 
 }
