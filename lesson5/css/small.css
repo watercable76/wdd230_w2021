@@ -1,7 +1,9 @@
 /* Nav formatting */
 nav {
     overflow: hidden;
+    /* first one lighter, second one slightly darker */
     background-color: #545454;
+    /* background-color: #46494c; */
     top: 0;
 }
 .navigation {

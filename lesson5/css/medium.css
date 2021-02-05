@@ -83,4 +83,11 @@
         padding: 15px;
     }
 
+    .sun_img {
+        /* width: 125px;
+        height: 125px; */
+        width: 50%;
+        height: auto;
+    }
+
 }
