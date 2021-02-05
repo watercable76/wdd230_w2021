@@ -1,11 +1,8 @@
 /* Nav formatting */
 nav {
     overflow: hidden;
-    background-color: gray;
-    position: sticky;
-    position: -webkit-sticky;
+    background-color: #545454;
     top: 0;
-    /* margin-left: 5%; */
 }
 .navigation {
 	list-style: none;
@@ -35,7 +32,7 @@ nav {
 }
 
 /* Change this later */
-.navigation a:active {
+.navigation li a:active {
     background-color:pink;
 }
 
@@ -73,7 +70,7 @@ footer {
     flex-flow: column;
     text-align: center;
     display: flex;
-    background-color: gray;
+    background-color: #545454;
     padding: 5px;
     font-size: 0.9rem;
     margin-top: 0;
