@@ -1,0 +1,16 @@
+@media only screen and (min-width: 60em) {
+    main {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        height: 200px;
+        width: 200px;
+    }
+
+    /* .sun_img {
+        height: 175px;
+        width: 175px;
+    } */
+
+}
