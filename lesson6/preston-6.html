@@ -12,6 +12,7 @@
 
     <!-- JavaScript references -->
     <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/windchill.js"></script>
 
     <!-- CSS styling -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -27,7 +28,7 @@
 
 </head>
 
-<body onload="current_date(),button_magic(), banner_top()">
+<body onload="current_date(),button_magic(), banner_top(), main()">
     <div id="banner_div">
         Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.
     </div>
@@ -59,10 +60,10 @@
             <div class="w_summary">
                 <h3>Weather summary</h4>
                     <p>Currently: </p>
-                    <p>High: </p>
-                    <p>Wind Chill: </p>
+                    <p>High: <span id='high_temp'>80</span> &#8457</p>
+                    <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
                     <p>Humidity: </p>
-                    <p>Wind Speed: </p>
+                    <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
             </div>
         </div>
         <br><br>
