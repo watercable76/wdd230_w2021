@@ -73,6 +73,11 @@
         float: right;
     }
 
+    .hero_imgs img {
+        width: 100%;
+        height: 2.5%;
+    }
+    
     #winter_img {
         width: 100%;
         height: 2.5%;

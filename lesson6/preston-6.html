@@ -54,10 +54,11 @@
     <main>
         <h2>Preston Idaho</h2>
         <div class="top_div">
-            <picture>
-                <source srcset="images/hero_small.jpg" media="(min-width: 500px) and
-                (max-width: 799px)">
-                <img id="winter_img" src="images/winter.jpg" alt="snow">
+            <picture class="hero_imgs">
+                <!-- <source media="(max-width: 200px)" srcset="images/winter_small.jpg"> -->
+                <source media="(max-width: 500px)" srcset="images/hero_small.jpg">
+                <source media="(max-width: 800px)" srcset="images/hero_med.jpg">
+                <img src="images/hero_large.jpg" alt="large hero image">
             </picture>
             <div class="w_summary">
                 <h3>Weather summary</h4>

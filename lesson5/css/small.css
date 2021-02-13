@@ -103,6 +103,16 @@ footer p {
     margin-bottom: 5%;
 }
 
+.hero_imgs img {
+    height: 10%;
+    width: 100%;
+}
+
+.hero_imgs source {
+    height: 10%;
+    width: 100%;
+}
+
 #winter_img {
     height: 10%;
     width: 100%;
