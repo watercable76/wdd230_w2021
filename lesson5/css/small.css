@@ -120,7 +120,7 @@ footer p {
 
 .w_summary h3 {
     text-decoration: underline;
-    text-underline-offset: 0.1em;
+    /* text-underline-offset: 0.1em; */
 }
 
 /* five day forecast formatting */
@@ -186,5 +186,5 @@ th {
 
 .active {
     text-decoration: underline;
-    text-underline-offset: 5px;
+    /* text-underline-offset: 5px; */
 }
