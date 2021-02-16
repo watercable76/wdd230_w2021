@@ -73,27 +73,28 @@ function current_date() {
     document.getElementById('cur_date').innerHTML = `${day}, ${date} ${month} ${year}`;
 }
 
-function button_magic() {
+// loads when the page loads
+window.addEventListener("load", function button_magic() {
     const hambutton = document.querySelector('.ham');
-    const mainnav = document.querySelector('.navigation')
+    const mainnav = document.querySelector('.navigation');
 
-    hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
+    hambutton.addEventListener('click', () => { mainnav.classList.toggle('responsive') }, false);
 
     // To solve the mid resizing issue with responsive class on
-    window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
-}
+    window.onresize = () => { if (window.innerWidth > 760) mainnav.classList.remove('responsive') };
+});
 
-function banner_top() {
+// load content after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function banner_top() {
     var d = new Date();
     var day = d.getDay();
+    // testing values
+    // var day = 5;
 
     const banner = document.getElementById('banner_div');
-
-    if(day == 5) {
+    if (day == 5) {
         banner.style.display = "block";
-    }
-    else {
+    } else {
         banner.style.display = "none";
     }
-
-}
+});
