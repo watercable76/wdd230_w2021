@@ -11,10 +11,11 @@ function preloadImage(img) {
 
 const imgOptions = {
     threshold: 1,
-    rootMargin: "0px 0px 50px 0px"
+    rootMargin: "0px 0px -75px 0px"
 };
 
 const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    console.log("Data is in transit");
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             return;
