@@ -12,4 +12,10 @@ main {
     box-shadow: 10px 10px grey;
     border: 0.5px solid black;
     margin: 15px auto;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+img[data-src] {
+    opacity: 0;
 }
