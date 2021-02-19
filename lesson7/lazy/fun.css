@@ -16,6 +16,6 @@ main {
     transition: opacity 2s;
 }
 
-img[data-src] {
+.gallery img[data-src] {
     opacity: 0;
 }
