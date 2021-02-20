@@ -31,3 +31,15 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach(image => {
     imgObserver.observe(image);
 });
+
+// function to set picture to col and row start/end
+document.addEventListener("DOMContentLoaded", function set_grid() {
+    var px = document.documentElement.clientWidth;
+    // 16 px to 1 em
+    var em = px / 16;
+    console.log(em);
+
+    if (em > 32.5) {
+        return;
+    }
+});
