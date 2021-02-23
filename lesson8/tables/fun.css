@@ -4,18 +4,18 @@ main {
     text-align: center;
     display: grid;
     grid-template-columns: 500px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.gallery img {
-    height: 400px;
-    width: 300px;
-    box-shadow: 10px 10px grey;
-    border: 0.5px solid black;
-    margin: 15px auto;
-    opacity: 1;
-    transition: opacity 2s;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
-.gallery img[data-src] {
-    opacity: 0;
+th {
+    background-color: #e7f0ed;
+}
+
+thead {
+    background-color: #7fb9c2;
 }
