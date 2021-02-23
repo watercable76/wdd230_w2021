@@ -7,15 +7,48 @@ main {
     font-family: 'Ubuntu', sans-serif;
 }
 
+ul {
+    text-align: left;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-}
-
-th {
-    background-color: #e7f0ed;
+    padding: 10px;
 }
 
 thead {
+    font-size: large;
+}
+
+tfoot {
+    font-size: small;
+}
+
+table {
+    width: 300px;
+}
+
+thead th, tfoot th {
     background-color: #7fb9c2;
+}
+
+
+
+tr:nth-child(odd) {
+    background-color: #e7ffed;
+}
+
+tr:nth-child(even) {
+    background-color: #e7f0ed;
+}
+
+tbody tr:first-child {
+    background-color: #628ca6;
+    color: white;
+}
+
+#mul_col {
+    background-color: #628ca6;
+    color: white;
 }
