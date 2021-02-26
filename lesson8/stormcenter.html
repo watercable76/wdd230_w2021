@@ -55,50 +55,37 @@
     </nav>
     <main>
         <h2>Image Gallery</h2>
-        <div class="gallery_imgs">
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/aurora_borealis.jpg" alt="placeholder"
-                    id="img1">
-                <figcaption>Aurora Borealis</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/clouds.jpg" alt="placeholder" id="img2">
-                <figcaption>Clouds</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/countryside.jpg" alt="placeholder"
-                    id="img3">
-                <figcaption>Countryside</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/fall_street.jpg" alt="placeholder"
-                    id="img4">
-                <figcaption>Street in Fall</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/frozen-branch.jpg" alt="placeholder"
-                    id="img5">
-                <figcaption>Frozen Branches</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/frozen_trees_by_river.jpg" alt="placeholder"
-                    id="img6">
-                <figcaption>Frozen trees by River</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/hay_rolls.jpg" alt="placeholder" id="img7">
-                <figcaption>Hay Rolls</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/sea_storm.jpg" alt="placeholder" id="img8">
-                <figcaption>Storm over Sea</figcaption>
-            </figure>
-            <figure class="gallery">
-                <img src="https://via.placeholder.com/150" data-src="images/stars_and_clouds.jpg" alt="placeholder"
-                    id="img9">
-                <figcaption>Stars and Clouds</figcaption>
-            </figure>
+        <div>
+            Please enter your full name: <input type="text" name="full_name" required><br>
+            Please enter your email here: <input type="email" name="email" placeholder="coolio@place.com"><br>
+            Please enter your phone number here: <input type="tel" name="telephone_num" required><br>
+            Please enter your zip code here: <input type="number" name="zip" required><br>
+            Please enter your storm date: <input type="date" name="storm_date" id=""><br>
+            Please pick your storm type here: <input list="options" name="storm_type" id=""><br>
+            <datalist id="options">
+                <option value="Flash Flood"></option>
+                <option value="Hail"></option>
+                <option value="Hurricane"></option>
+                <option value="Thunderstorm"></option>
+                <option value="Tornado"></option>
+            </datalist>
+            Please pick the severity of the storm here: <input type="range" name="severity" id="severity" min="1"
+                max="10" step="1"><label for="severity"></label><br>
+            <label for="region">Choose your region:</label>
+
+            <select name="region" id="regions">
+                <option value="" disabled>Select Region ...</option>
+                <option value="Presont">Preston</option>
+                <option value="Soda Springs">Soda Springs</option>
+                <option value="Fish Haven">Fish Haven</option>
+            </select><br>
+            What level of danger are you in: <input type="radio" name="danger" id="danger1"><label for="yes">Yes</label>
+            <input type="radio" name="danger" id="danger2"><label for="no">No</label>
+            <input type="radio" name="danger" id="danger3"><label for="maybe">Maybe</label><br>
+            <textarea name="more_info" id="info" cols="30" rows="10" placeholder="Please enter any other relevant information that should be included"></textarea><br>
+            <button type="submit">Click me</button>
         </div>
+
         <br><br><br><br>
 
     </main>
