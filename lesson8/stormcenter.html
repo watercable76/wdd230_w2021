@@ -55,36 +55,56 @@
     </nav>
     <main>
         <h2>Image Gallery</h2>
-        <div>
-            Please enter your full name: <input type="text" name="full_name" required><br>
-            Please enter your email here: <input type="email" name="email" placeholder="coolio@place.com"><br>
-            Please enter your phone number here: <input type="tel" name="telephone_num" required><br>
-            Please enter your zip code here: <input type="number" name="zip" required><br>
-            Please enter your storm date: <input type="date" name="storm_date" id=""><br>
-            Please pick your storm type here: <input list="options" name="storm_type" id=""><br>
-            <datalist id="options">
-                <option value="Flash Flood"></option>
-                <option value="Hail"></option>
-                <option value="Hurricane"></option>
-                <option value="Thunderstorm"></option>
-                <option value="Tornado"></option>
-            </datalist>
-            Please pick the severity of the storm here: <input type="range" name="severity" id="severity" min="1"
-                max="10" step="1"><label for="severity"></label><br>
-            <label for="region">Choose your region:</label>
-
-            <select name="region" id="regions">
-                <option value="" disabled>Select Region ...</option>
-                <option value="Presont">Preston</option>
-                <option value="Soda Springs">Soda Springs</option>
-                <option value="Fish Haven">Fish Haven</option>
-            </select><br>
-            What level of danger are you in: <input type="radio" name="danger" id="danger1"><label for="yes">Yes</label>
+        <form class="form_div">
+            <label for="full_name">
+                Please enter your full name: <input id="full_name" type="text" name="full_name" placeholder="name" required>
+            </label><br>
+            <label for="email">
+                Please enter your email here: <input type="email" name="email" placeholder="coolio@place.com">
+            </label><br>
+            <label for="telephone_num">
+                Please enter your phone number here: <input id="telephone_num" type="tel" name="telephone_num"
+                    placeholder="111-111-1111" required>
+            </label><br>
+            <label for="zip">
+                Please enter your zip code here: <input id="zip" type="number" name="zip" placeholder="14234" required>
+            </label><br>
+            <label for="storm_date">
+                Please enter your storm date: <input id="storm_date" type="date" name="storm_date" placeholder="date"><br>
+            </label>
+            <label for="storm_type">
+                Please pick your storm type here: <input id="storm_type" list="options" name="storm_type" placeholder="storm type"><br>
+            </label>
+            <label for="options">
+                <datalist id="options">
+                    <option value="Flash Flood"></option>
+                    <option value="Hail"></option>
+                    <option value="Hurricane"></option>
+                    <option value="Thunderstorm"></option>
+                    <option value="Tornado"></option>
+                </datalist>
+            </label>
+            <label for="severity">
+                Please pick the severity of the storm here: <input type="range" name="severity" id="severity" min="1"
+                    max="10" step="1"><br>
+            </label>
+            <label for="region">Choose your region:
+                <select name="region" id="regions">
+                    <option value="" disabled>Select Region ...</option>
+                    <option value="Presont">Preston</option>
+                    <option value="Soda Springs">Soda Springs</option>
+                    <option value="Fish Haven">Fish Haven</option>
+                </select><br>
+            </label>
+            Are you in danger: <input type="radio" name="danger" id="danger1"><label for="yes">Yes</label>
             <input type="radio" name="danger" id="danger2"><label for="no">No</label>
-            <input type="radio" name="danger" id="danger3"><label for="maybe">Maybe</label><br>
-            <textarea name="more_info" id="info" cols="30" rows="10" placeholder="Please enter any other relevant information that should be included"></textarea><br>
+            <input type="radio" name="danger" id="danger3"><label for="maybe">Maybe</label><br><br><br>
+            <label for="info">
+                <textarea name="more_info" id="info" cols="30" rows="10"
+                    placeholder="Please enter any other relevant information that should be included"></textarea><br>
+            </label>
             <button type="submit">Click me</button>
-        </div>
+        </form>
 
         <br><br><br><br>
 

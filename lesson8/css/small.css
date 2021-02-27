@@ -288,3 +288,26 @@ figure {
     background-color: pink;
     border: #545454 solid;
 }
+
+
+form {
+    max-width: 80%;
+    overflow: hidden;
+    display: block;
+    padding-top: 1rem;
+}
+
+input:not([type='radio']) {
+    clear: both;
+    float: right;
+}
+
+/* input {
+    clear: both;
+    float: right;
+}
+
+
+input[type='radio'] {
+    float: none;
+} */
