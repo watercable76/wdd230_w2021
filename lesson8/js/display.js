@@ -43,3 +43,9 @@ document.addEventListener("DOMContentLoaded", function set_grid() {
         return;
     }
 });
+
+
+// adjusting the rating for the slider values
+function adjustRating(severity) {
+    document.getElementById("severity_value").innerHTML = severity;
+}
