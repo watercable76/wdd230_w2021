@@ -92,6 +92,18 @@ section {
 }
 
 img {
-    height: 25%;
-    width: 25%;
+    height: auto;
+    width: 30%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(9, 1fr); */
+    grid-gap: 15px;
+}
+
+section:nth-child(n) {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
