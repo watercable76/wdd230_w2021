@@ -33,3 +33,18 @@ fetch(requestURL)
             document.querySelector('div.cards').appendChild(card);
         }
     });
+
+function set_styles() {
+    var elements = document.querySelector('cards').children;
+    var start = 1;
+    var end = 3;
+    
+    for (let i = 0; i < elements.length; i++) {
+        if (i % 2 == 0) {
+            // set row start and end
+            return;
+        } else {
+            return;
+        }
+    }
+}
