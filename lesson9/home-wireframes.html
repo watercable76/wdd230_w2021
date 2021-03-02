@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicholas Cable">
+    <meta name="description" content="Preston Web page.">
+    <!-- Adding favicon icon
+        <link rel="shortcut icon" href="/favicon.ico"> -->
+    <title>Idaho News</title>
+
+    <!-- JavaScript references -->
+    <script src="js/footer.js"></script>
+    <script src="js/windchill.js"></script>
+    <script src="js/display.js" defer></script>
+
+    <!-- CSS styling -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+
+    <!-- Google Fonts References -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="current_date()">
+    <div id="banner_div">
+        Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.
+    </div>
+    <header>
+        <img class="logo" src="images/iconfinder_weather-26_1530361.png" alt="Picture of a cloud">
+        <div id="header_txt_div">
+            <h2>Idaho News</h2>
+            <p>Idaho weather forecast that is always right</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a class="ham" href="#">Menu</a></li>
+            <li><a class="active" href="gallery-8.html">Home</a></li>
+            <li><a href="#">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="./tables/tablebuild.html">TableBuild</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        <h2>Wireframes</h2>
+
+        <figure class="wireframes"><img src="./images/small_wireframe.jpg" alt="small_wireframe">
+        <figcaption>Some text</figcaption></figure>
+        <figure class="wireframes"><img src="./images/medium_wireframe.jpg" alt="medium_wireframe">
+        <figcaption>Some text</figcaption></figure>
+        <figure class="wireframes"><img src="./images/large_wireframe.jpg" alt="large_wireframe">
+        <figcaption>Some text</figcaption></figure>
+
+
+        <br><br><br><br>
+
+    </main>
+    <footer>
+        <p id="cur_date"></p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({ google: { families: ["Yusei Magic", "Open Sans", "Monsterrat"] } });
+    </script>
+
+</body>
+
+</html>

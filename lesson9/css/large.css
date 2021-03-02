@@ -81,4 +81,9 @@
         grid-row-end: 3;
     }
 
+    .wireframes:not(:first-child) {
+        height: 100%;
+        width: 100%;
+    }
+
 }

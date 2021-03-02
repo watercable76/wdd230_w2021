@@ -186,7 +186,6 @@ th {
 
 .active {
     text-decoration: underline;
-    text-underline-offset: 5px;
 }
 
 /* Formatting for gallery images*/
@@ -319,3 +318,17 @@ fieldset span {
     float: right;
     margin-right: 10px;
 }
+
+.wireframes {
+    background-color: white;
+}
+
+.wireframes:not(:first-child) {
+    height: 100%;
+    width: 100%;
+}
+
+/* .wireframes img {
+    height: 100%;
+    width: 100%;
+} */
