@@ -47,18 +47,11 @@
     section:nth-child(n) {
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row: auto auto;
-        /* grid-row-start: 1;
-        grid-row-end: 2; */
     }
 
     section:nth-child(2n) {
         grid-column-start: 3;
         grid-column-end: 5;
-        grid-row: auto auto;
-        /* grid-row-start: 1;
-        grid-row-end: 2; */
     }
-
 }
 

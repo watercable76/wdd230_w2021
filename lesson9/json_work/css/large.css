@@ -18,7 +18,6 @@
     section:nth-child(n) {
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row: auto auto;
     }
 
     /* 2n does not work for these values 
@@ -26,14 +25,10 @@
     section:nth-child(3n-1) {
         grid-column-start: 4;
         grid-column-end: 7;
-        grid-row: auto auto;
     }
 
     section:nth-child(3n) {
         grid-column-start: 7;
         grid-column-end: 10;
-        grid-row: auto auto;
     }
-
-    
 }
