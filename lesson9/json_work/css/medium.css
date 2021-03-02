@@ -43,29 +43,21 @@
         grid-template-rows: repeat(9, 1fr);
         grid-gap: 15px;
     }
-    
-    /* section:nth-child(n) {
+
+    section:nth-child(n) {
         grid-column-start: 1;
         grid-column-end: 3;
+        grid-row: auto auto;
+        /* grid-row-start: 1;
+        grid-row-end: 2; */
     }
 
-    section:nth-child(n+1) {
+    section:nth-child(2n) {
         grid-column-start: 3;
         grid-column-end: 5;
-    } */
-
-    section:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    section:nth-child(2) {
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row: auto auto;
+        /* grid-row-start: 1;
+        grid-row-end: 2; */
     }
 
 }
