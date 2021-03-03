@@ -14,6 +14,7 @@
     <script src="js/footer.js"></script>
     <script src="js/windchill.js"></script>
     <script src="js/display.js" defer></script>
+    <script src="js/townapi.js"></script>
 
     <!-- CSS styling -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -29,7 +30,7 @@
 
 </head>
 
-<body onload="current_date()">
+<body onload="current_date(), main()">
     <div id="banner_div">
         Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.
     </div>
@@ -55,105 +56,72 @@
     </nav>
     <main>
         <h2>Image Gallery</h2>
-        <form class="form_div">
-            <fieldset>
-                <label for="full_name">
-                    Please enter your full name: <input id="full_name" type="text" name="full_name" placeholder="name"
-                        required>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="email">
-                    Please enter your email here: <input type="email" name="email" placeholder="coolio@place.com">
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="telephone_num">
-                    Please enter your phone number here: <input id="telephone_num" type="tel" name="telephone_num"
-                        placeholder="111-111-1111" required>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="zip">
-                    Please enter your zip code here: <input id="zip" type="number" name="zip" placeholder="14234"
-                        required>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="storm_date">
-                    Please enter your storm date: <input id="storm_date" type="date" name="storm_date"
-                        placeholder="date"><br>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="storm_type">
-                    Please pick your storm type here: <input id="storm_type" list="options" name="storm_type"
-                        placeholder="storm type"><br><label for="options">
-                        <datalist id="options">
-                            <option value="Flash Flood"></option>
-                            <option value="Hail"></option>
-                            <option value="Hurricane"></option>
-                            <option value="Thunderstorm"></option>
-                            <option value="Tornado"></option>
-                        </datalist>
-                    </label>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="severity">
-                    Please pick the severity of the storm here: <input type="range" name="severity" id="severity"
-                        min="1" max="10" step="1" list="numbers" oninput="adjustRating(this.value)"
-                        onchange="adjustRating(this.value)">
-                </label>
-                <datalist id="numbers">
-                    <option value="1">
-                    <option value="2">
-                    <option value="3">
-                    <option value="4">
-                    <option value="5">
-                    <option value="6">
-                    <option value="7">
-                    <option value="8">
-                    <option value="9">
-                    <option value="10">
-                </datalist>
-                <span id="severity_value">5</span>
-            </fieldset>
-            <fieldset>
-                <label for="region">Choose your region:
-                    <select name="region" id="regions">
-                        <option value="" disabled>Select Region ...</option>
-                        <option value="Presont">Preston</option>
-                        <option value="Soda Springs">Soda Springs</option>
-                        <option value="Fish Haven">Fish Haven</option>
-                    </select><br>
-                </label>
-            </fieldset>
-            <fieldset>
-                Are you in danger: <input type="radio" name="danger" id="danger1"><label for="yes">Yes</label>
-                <input type="radio" name="danger" id="danger2"><label for="no">No</label>
-                <input type="radio" name="danger" id="danger3"><label for="maybe">Maybe</label><br><br><br>
-            </fieldset>
-            <fieldset>
-                <label for="info">
-                    <textarea name="more_info" id="info" cols="30" rows="10"
-                        placeholder="Please enter any other relevant information that should be included"></textarea><br>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <br>
+        
 
-
-
-
-
-
-            <a href="thanks.html">
-                <button type="submit">Click me</button>
-            </a>
-
-        </form>
+        <div class="top_div">
+            <picture class="hero_imgs">
+                <!-- <source media="(max-width: 200px)" srcset="images/winter_small.jpg"> -->
+                <source media="(max-width: 518px)" srcset="images/hero_small.jpg">
+                <source media="(min-width: 519px) and (max-width: 960px)" srcset="images/hero_med.jpg">
+                <img src="images/hero_large.jpg" alt="large hero image">
+            </picture>
+            <div class="w_summary">
+                <h3>Weather summary</h3>
+                    <p>Currently: </p>
+                    <p>High: <span id='high_temp'>80</span> &#8457</p>
+                    <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
+                    <p>Humidity: </p>
+                    <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="five_day_forecast">
+            <h2>Five Day Forecast</h2>
+            <table>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <br><br>
+        <div class="article_div">
+            <div id="text_div">
+                <h2>Article about something</h2>
+                <p>
+                    In recent events, the snow is melting. The weather here in Idaho is a bit messed up, and everyone is
+                    going nuts.
+                    We do now know when this crazy weather is ever going to end, but we do know that there will be a
+                    large
+                    snow storm this weekend,
+                    and we will be receiving up to five inches of snow. We advise that everyone stocks up on food as
+                    this is
+                    going to hit hard and
+                    will not be pretty.
+                </p>
+            </div>
+            <img id="fall_img" src="images/fall.jpg" alt="fall image">
+        </div>
 
         <br><br><br><br>
 
