@@ -20,18 +20,20 @@ fetch(requestURL)
                 let p2 = document.createElement('p');
                 let p3 = document.createElement('p');
 
-                // create img and store inside a figure element
-                // let img = document.createElement('img');
-                // let figure = document.createElement('figure');
-                // figure.setAttribute('class', 'json_fig_imgs');
-
-                // image = "images/" + towns[i].photo;
-                // img.setAttribute('src', image);
-                // img.setAttribute('alt', name);
-                // figure.appendChild(img);
-
-
                 let name = towns[i].name;
+
+                // create img and store inside a figure element
+                let img = document.createElement('img');
+                let figure = document.createElement('figure');
+                figure.setAttribute('class', 'json_fig_imgs');
+
+                image = "images/" + towns[i].photo;
+                img.setAttribute('src', image);
+                img.setAttribute('alt', "image of " + name);
+                img.setAttribute('class', 'fig_imgs');
+                figure.appendChild(img);
+
+
 
                 h2.textContent = name;
                 span.textContent = towns[i].motto;
@@ -46,8 +48,8 @@ fetch(requestURL)
                 card.appendChild(p1);
                 card.appendChild(p2);
                 card.appendChild(p3);
-                // card.appendChild(img);
-                // card.appendChild(figure);
+                card.appendChild(img);
+                card.appendChild(figure);
 
                 document.querySelector('div.cards').appendChild(card);
             }

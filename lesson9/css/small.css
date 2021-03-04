@@ -355,3 +355,8 @@ section:nth-child(n) {
     font-style: italic;
     font-size: 85%;
 }
+
+.fig_images {
+    width: 100px;
+    height: auto;
+}
