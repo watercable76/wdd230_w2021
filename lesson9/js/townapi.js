@@ -10,26 +10,47 @@ fetch(requestURL)
 
         const towns = jsonObject['towns'];
 
-        for (let i = 0; i < prophets.length; i++) {
-            let card = document.createElement('section');
-            // create h2 for names, p for birthdate/place of birth, set img to source found
-            let h2 = document.createElement('h2');
-            let p1 = document.createElement('p');
-            let p2 = document.createElement('p');
-            let img = document.createElement('img');
-            let name = prophets[i].name + ' ' + prophets[i].lastname;
+        for (let i = 0; i < towns.length; i++) {
+            if (towns[i].name === 'Preston' || towns[i].name === 'Soda Springs' || towns[i].name === 'Fish Haven') {
+                let card = document.createElement('section');
+                // create h2 for town name, motto (italicized), year founded, population and rainfall
+                let h2 = document.createElement('h2');
+                let span = document.createElement('span');
+                let p1 = document.createElement('p');
+                let p2 = document.createElement('p');
+                let p3 = document.createElement('p');
 
-            h2.textContent = name;
-            p1.textContent = 'Date of Birth: ' + prophets[i].birthdate;
-            p2.textContent = 'Place of Birth: ' + prophets[i].birthplace;
-            img.setAttribute('src', prophets[i].imageurl);
-            img.setAttribute('alt', 'Image of the prophet ' + name);
+                // create img and store inside a figure element
+                // let img = document.createElement('img');
+                // let figure = document.createElement('figure');
+                // figure.setAttribute('class', 'json_fig_imgs');
 
-            card.appendChild(h2);
-            card.appendChild(p1);
-            card.appendChild(p2);
-            card.appendChild(img);
+                // image = "images/" + towns[i].photo;
+                // img.setAttribute('src', image);
+                // img.setAttribute('alt', name);
+                // figure.appendChild(img);
 
-            document.querySelector('div.cards').appendChild(card);
+
+                let name = towns[i].name;
+
+                h2.textContent = name;
+                span.textContent = towns[i].motto;
+                p1.textContent = "Year Founded: " + towns[i].yearFounded;
+                p2.textContent = "Population: " + towns[i].currentPopulation;
+                p3.textContent = "Annual Rain Fall: " + towns[i].averageRainfall;
+
+                span.setAttribute('class', 'motto');
+
+                card.appendChild(h2);
+                card.appendChild(span);
+                card.appendChild(p1);
+                card.appendChild(p2);
+                card.appendChild(p3);
+                // card.appendChild(img);
+                // card.appendChild(figure);
+
+                document.querySelector('div.cards').appendChild(card);
+            }
+
         }
     });

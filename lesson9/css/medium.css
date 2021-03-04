@@ -170,5 +170,22 @@
         width: 100%;
     }
 
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 15px;
+    }
+
+    section:nth-child(n) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    section:nth-child(2n) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
 }
 
