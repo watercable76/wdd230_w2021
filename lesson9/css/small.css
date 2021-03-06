@@ -356,7 +356,11 @@ section:nth-child(n) {
     font-size: 85%;
 }
 
-.fig_images {
-    width: 100px;
-    height: auto;
+.fig_imgs {
+    width: 75%;
+}
+
+.json_fig_imgs {
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
