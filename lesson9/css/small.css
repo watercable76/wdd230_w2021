@@ -120,7 +120,6 @@ footer p {
 
 .w_summary h3 {
     text-decoration: underline;
-    text-underline-offset: 0.1em;
 }
 
 /* five day forecast formatting */
@@ -302,14 +301,14 @@ input:not([type='radio']) {
 }
 
 fieldset {
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-block-start: 0;
+    /* margin-inline-start: 0;
+    margin-inline-end: 0; */
+    /* padding-block-start: 0;
     padding-block-end: 0;
     padding-inline-start: 0;
-    padding-inline-end: 0;
+    padding-inline-end: 0; */
     border: none;
-    min-inline-size: min-content;
+    /* min-inline-size: min-content; */
     margin-top: 15px;
     margin-bottom: 15px;
 }
