@@ -8,10 +8,11 @@
     <meta name="description" content="Working with json data.">
     <!-- Adding favicon icon
         <link rel="shortcut icon" href="/favicon.ico"> -->
-    <title>Prophets</title>
+    <title>API Testing</title>
 
     <!-- JavaScript references -->
-    <script src="prophets.js"></script>
+    <script src="weatherapi.js"></script>
+    <script src="windchill.js"></script>
 
     <!-- CSS styling -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -28,12 +29,24 @@
 </head>
 
 <body>
-    <header>
-        <h1>Latter-day Prophets</h1>
-    </header>
-    <main>
-        <div class="cards"></div>
-    </main>
+    <h1>OpenWeatherMap.org API Test</h1>
+    <p>The current temperature in Preston, Idaho is <span id="current-temp"></span>&deg; F</p>
+    <hr>
+    <p>Image Icon Path Test: <span id="imagesrc"></span> &nbsp; <img src="" alt="" id="icon"></p>
+    <!-- Doing work for api here, will transfer to final file when finished -->
+    <div class="w_summary">
+        <h3>Weather summary</h3>
+        <p>Currently: <span id="cur_condition">&nbsp;</span></p>
+        <p>High: <span id='high_temp'></span> &#8457</p>
+        <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
+        <p>Humidity: <span id="cur_humidity">&nbsp;</span> </p>
+        <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
+    </div>
+
+    <script src="weatherapi.js"></script>
+    <script src="windchill.js">
+        main();
+    </script>
     <footer>
         Nicholas Cable | BYU-Idaho | WDD 230
     </footer>
