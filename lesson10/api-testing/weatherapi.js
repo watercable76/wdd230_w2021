@@ -1,6 +1,6 @@
 // import { main } from './windchill.js';
 
-const ApiURL = 'http://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=07edcaccc064119c281855eedd314fc9&units=imperial';
+const ApiURL = 'http://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=';
 
 
 function wind_speed(temp, wind) {
