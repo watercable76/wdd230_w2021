@@ -39,14 +39,44 @@
         <p>Currently: <span id="cur_condition">&nbsp;</span></p>
         <p>High: <span id='high_temp'></span> &#8457</p>
         <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
-        <p>Humidity: <span id="cur_humidity">&nbsp;</span> </p>
+        <p>Humidity: <span id="cur_humidity">&nbsp;</span> %</p>
         <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
     </div>
 
-    <script src="weatherapi.js"></script>
+    <div class="five_day_forecast">
+        <h2>Five Day Forecast</h2>
+        <table>
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+            <tr>
+                <th><img class="sun_img" src="images/sun.png" alt="sun">
+                    <p>87&#8457;</p>
+                </th>
+                <th><img class="sun_img" src="images/sun.png" alt="sun">
+                    <p>87&#8457;</p>
+                </th>
+                <th><img class="sun_img" src="images/sun.png" alt="sun">
+                    <p>87&#8457;</p>
+                </th>
+                <th><img class="sun_img" src="images/sun.png" alt="sun">
+                    <p>87&#8457;</p>
+                </th>
+                <th><img class="sun_img" src="images/sun.png" alt="sun">
+                    <p>87&#8457;</p>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- <script src="weatherapi.js"></script>
     <script src="windchill.js">
         main();
-    </script>
+    </script> -->
     <footer>
         Nicholas Cable | BYU-Idaho | WDD 230
     </footer>
