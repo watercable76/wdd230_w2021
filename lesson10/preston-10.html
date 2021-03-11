@@ -15,6 +15,7 @@
     <script src="js/windchill.js"></script>
     <script src="js/display.js" defer></script>
     <script src="js/townapi.js"></script>
+    <script src="js/weatherapi.js"></script>
 
     <!-- CSS styling -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -64,11 +65,11 @@
             </picture>
             <div class="w_summary">
                 <h3>Weather summary</h3>
-                    <p>Currently: <span id="cur_temp">&nbsp;</span></p>
-                    <p>High: <span id='high_temp'>80</span> &#8457</p>
-                    <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
-                    <p>Humidity: <span id="cur_humidity">&nbsp;</span> </p>
-                    <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
+                <p>Currently: <span id="cur_condition">&nbsp;</span></p>
+                <p>High: <span id='high_temp'></span> &#8457</p>
+                <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
+                <p>Humidity: <span id="cur_humidity">&nbsp;</span> %</p>
+                <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
             </div>
         </div>
         <br><br>
@@ -82,8 +83,8 @@
                     <th>Thursday</th>
                     <th>Friday</th>
                 </tr>
-                <tr>
-                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                <tr class="row_two_table">
+                    <!-- <th><img class="sun_img" src="images/sun.png" alt="sun">
                         <p>87&#8457;</p>
                     </th>
                     <th><img class="sun_img" src="images/sun.png" alt="sun">
@@ -97,7 +98,7 @@
                     </th>
                     <th><img class="sun_img" src="images/sun.png" alt="sun">
                         <p>87&#8457;</p>
-                    </th>
+                    </th> -->
                 </tr>
             </table>
         </div>

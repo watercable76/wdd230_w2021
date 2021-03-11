@@ -5,7 +5,7 @@
 // console.log(weather);
 // const ApiURL = weather.key;
 
-const ApiURL = 'http://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=07edcaccc064119c281855eedd314fc9&units=imperial';
+const ApiURL = '';
 
 
 function wind_chill(temp, wind) {
@@ -23,7 +23,10 @@ fetch(ApiURL)
 
         for (let i = 0; i < jsonObject.list.length; i++) {
             if (i === 0) {
-                var cur_condition = jsonObject.list[i].weather.description;
+                console.log(jsonObject.list[i].weather[0].description);
+                var cur_condition = jsonObject.list[i].weather[0].description;
+                cur_condition = cur_condition.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+
                 var high_temp = jsonObject.list[i].main.temp_max;
                 var cur_humidity = jsonObject.list[i].main.humidity;
                 var wind_speed = jsonObject.list[i].wind.speed;
@@ -50,11 +53,11 @@ fetch(ApiURL)
                 img.setAttribute('class', 'five_day_icon');
 
                 // create the span to hold the temp
-                let span = document.createElement('span');
-                span.textContent = jsonObject.list[i].main.temp;
+                let p = document.createElement('p');
+                p.textContent = (jsonObject.list[i].main.temp).toFixed(0) + '\u00B0F';
 
                 th.appendChild(img);
-                th.appendChild(span);
+                th.appendChild(p);
 
                 document.querySelector('tr.row_two_table').appendChild(th);
             }
@@ -62,12 +65,12 @@ fetch(ApiURL)
 
         // main();
 
-        document.getElementById('current-temp').textContent = jsonObject.list[0].main.temp;
+        // document.getElementById('current-temp').textContent = jsonObject.list[0].main.temp;
 
-        const imagesrc = 'https://openweathermap.org/img/w/' + jsonObject.list[0].weather[0].icon + '.png';  // note the concatenation
-        const desc = jsonObject.list[0].weather[0].description;  // note how we reference the weather array
-        document.getElementById('imagesrc').textContent = imagesrc;  // informational specification only
-        document.getElementById('icon').setAttribute('src', imagesrc);  // focus on the setAttribute() method
-        document.getElementById('icon').setAttribute('alt', desc);
+        // const imagesrc = 'https://openweathermap.org/img/w/' + jsonObject.list[0].weather[0].icon + '.png';  // note the concatenation
+        // const desc = jsonObject.list[0].weather[0].description;  // note how we reference the weather array
+        // document.getElementById('imagesrc').textContent = imagesrc;  // informational specification only
+        // document.getElementById('icon').setAttribute('src', imagesrc);  // focus on the setAttribute() method
+        // document.getElementById('icon').setAttribute('alt', desc);
 
     });

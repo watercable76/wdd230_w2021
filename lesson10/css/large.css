@@ -128,5 +128,9 @@
     .cards_section {
         display: block;
     }
+    
 
+    th .five_day_icon {
+        height: 150px;
+    }
 }

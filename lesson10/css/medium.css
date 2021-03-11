@@ -200,5 +200,10 @@
         grid-row: 1;
     }
 
+
+    th .five_day_icon {
+        height: 100%;
+    }
+
 }
 

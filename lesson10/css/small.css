@@ -136,6 +136,10 @@ footer p {
     text-align: center;
 }
 
+table {
+    font-size: 115%;
+}
+
 table, th{
     border: 1px solid black;
 }
