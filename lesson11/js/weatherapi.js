@@ -5,16 +5,42 @@
 // console.log(weather);
 // const ApiURL = weather.key;
 
-const city_id = 0;
-
 // const city_name = document.getElementsByClassName('city_name');
 // console.log(city_name[0]);
 
-let elements = document.getElementById('cur_condition').value;
-console.log(elements);
+// does not work. Maybe because page is not rendered yet
+// let elements = document.getElementById('cur_condition').textContent;
+// console.log(elements);
+
+// city_id's for all of the towns
+/********************************************
+ * Fish Haven   - 5585010
+ * Soda Springs - 5607916
+ * Preston      - 5604473
+ ********************************************/
+
+const x = document.getElementsByTagName('title')[0].textContent;
+console.log(x);
+
+var city_id = 0;
+
+switch (x) {
+    case 'Fish Haven':
+        city_id = 5585010;
+        break;
+    case 'Soda Springs':
+        city_id = 5607916;
+        break;
+    case 'Preston':
+        city_id = 5604473;
+        break;
+
+    default:
+        break;
+}
 
 
-const ApiURL = 'http://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=07edcaccc064119c281855eedd314fc9&units=imperial';
+const ApiURL = `http://api.openweathermap.org/data/2.5/forecast?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
 
 
 function wind_chill(temp, wind) {
