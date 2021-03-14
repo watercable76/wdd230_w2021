@@ -71,7 +71,7 @@ fetch(requestURL)
             console.log('Else if');
             // create header element
             let h3 = document.createElement('h3');
-            h3.textContent = 'Upcoming Events';
+            h3.textContent = 'Upcoming Events - Not part of wk10 req\'s, just wanted to get a head start on it';
 
 
             // append all elements to the div in the page 
