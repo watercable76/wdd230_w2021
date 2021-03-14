@@ -23,6 +23,39 @@
 
 // console.log(x);
 
+// set days of the week automatically
+
+function current_date(day) {
+
+    // check and set day as the string value
+    switch (day) {
+        case 0:
+            day = 'Sunday';
+            break;
+        case 1:
+            day = 'Monday';
+            break;
+        case 2:
+            day = 'Tuesday';
+            break;
+        case 3:
+            day = 'Wednesday';
+            break;
+        case 4:
+            day = 'Thursday';
+            break;
+        case 5:
+            day = 'Friday';
+            break;
+        case 6:
+            day = 'Saturday';
+            break;
+    }
+
+    return day;
+}
+
+
 const x = document.getElementsByTagName('title')[0].textContent;
 console.log(x);
 
@@ -58,7 +91,35 @@ fetch(ApiURL)
     .then(function (jsonObject) {
         console.table(jsonObject); // temporary checking for valid response and data parsing
         // console.log(jsonObject.list[0].main.temp);
-        var count = 0;
+
+        // runs when the api call is made
+        var d = new Date();
+        var day = d.getDay();
+        var count = day;
+
+        for (let i = 0; i < 5; i++) {
+            console.log(current_date(count));
+            let day = current_date(count);
+            console.log(day);
+
+            let p = document.createElement('p');
+            p.textContent = day;
+
+            let th = document.createElement('th');
+            th.appendChild(p);
+
+            console.log(th);
+
+            if (count == 6) { count = 0; }
+            else { count++; }
+
+            document.querySelector('tr.table_row_one').appendChild(th);
+
+            // var stuff = document.querySelector('tr.table_row_one');
+            // console.log(stuff);
+        }
+
+
 
         for (let i = 0; i < jsonObject.list.length; i++) {
             if (i === 0) {
