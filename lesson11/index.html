@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nicholas Cable">
-    <meta name="description" content="Fish Haven Web page.">
+    <meta name="description" content="Preston Web page.">
     <!-- Adding favicon icon
         <link rel="shortcut icon" href="/favicon.ico"> -->
-    <title>Fish Haven</title>
+    <title>Idaho News</title>
 
     <!-- JavaScript references -->
     <script src="js/footer.js"></script>
     <script src="js/windchill.js"></script>
     <script src="js/display.js" defer></script>
-    <script src="js/townapi.js"></script>
-    <script src="js/weatherapi.js"></script>
+    <script src="js/townapi.js"></script> 
 
     <!-- CSS styling -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -54,22 +53,26 @@
         </ul>
     </nav>
     <main>
-        <h2 id="city_name">Fish Haven Idaho</h2>
+        <h2>Idaho News</h2>
+
+
         <div class="top_div">
             <picture class="hero_imgs">
+                <!-- <source media="(max-width: 200px)" srcset="images/winter_small.jpg"> -->
                 <source media="(max-width: 518px)" srcset="images/hero_small.jpg">
                 <source media="(min-width: 519px) and (max-width: 960px)" srcset="images/hero_med.jpg">
                 <img src="images/hero_large.jpg" alt="large hero image">
             </picture>
             <div class="w_summary">
-                <h3>Weather Summary</h3>
-                <p>Currently: <span id="cur_condition">&nbsp;</span></p>
-                <p>High: <span id='high_temp'></span> &#8457</p>
-                <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
-                <p>Humidity: <span id="cur_humidity">&nbsp;</span> %</p>
+                <h3>Weather summary</h3>
+                <p>Currently: </p>
+                <p>High: <span id='high_temp'>80</span> &#8457;</p>
+                <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457;</p>
+                <p>Humidity: </p>
                 <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
             </div>
-        </div>
+        </div><br><br>
+        <div class='cards'></div>
         <br><br>
         <div class="five_day_forecast">
             <h2>Five Day Forecast</h2>
@@ -81,11 +84,25 @@
                     <th>Thursday</th>
                     <th>Friday</th>
                 </tr>
-                <tr class="row_two_table"></tr>
+                <tr>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                    <th><img class="sun_img" src="images/sun.png" alt="sun">
+                        <p>87&#8457;</p>
+                    </th>
+                </tr>
             </table>
         </div>
-        <br><br>
-        <div class="town_events"></div>
         <br><br>
         <div class="article_div">
             <div id="text_div">
@@ -104,25 +121,25 @@
             </div>
             <img id="fall_img" src="images/fall.jpg" alt="fall image">
         </div>
-        <br><br>
 
-        <div class="map_div">
+        <br><br><br><br>
+
+    </main>
+    <footer>
+        <div class="footer_div">
             <div class="contact_info">
                 <h3>Contact Information</h3>
                 <p>Idaho News</p>
                 <p>Email: coolio@somestuff.com</p>
                 <p>Phone Number: 111-222-4444</p>
+                <p id="cur_date"></p>
             </div>
             <img id="map_img" src="images/map.jpg" alt="map">
         </div>
-
-    </main>
-    <footer>
-        <p id="cur_date"></p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
-        WebFont.load({google: {families: ["Yusei Magic", "Open Sans", "Monsterrat"]}});
+        WebFont.load({ google: { families: ["Yusei Magic", "Open Sans", "Monsterrat"] } });
     </script>
 
 </body>

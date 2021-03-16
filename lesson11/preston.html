@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nicholas Cable">
-    <meta name="description" content="Fish Haven Web page.">
+    <meta name="description" content="Preston Web page.">
     <!-- Adding favicon icon
         <link rel="shortcut icon" href="/favicon.ico"> -->
-    <title>Fish Haven</title>
+    <title>Preston</title>
 
     <!-- JavaScript references -->
     <script src="js/footer.js"></script>
@@ -54,7 +54,7 @@
         </ul>
     </nav>
     <main>
-        <h2 id="city_name">Fish Haven Idaho</h2>
+        <h2>Preston Idaho</h2>
         <div class="top_div">
             <picture class="hero_imgs">
                 <source media="(max-width: 518px)" srcset="images/hero_small.jpg">
@@ -62,30 +62,24 @@
                 <img src="images/hero_large.jpg" alt="large hero image">
             </picture>
             <div class="w_summary">
-                <h3>Weather Summary</h3>
+                <h3>Weather summary</h3>
                 <p>Currently: <span id="cur_condition">&nbsp;</span></p>
-                <p>High: <span id='high_temp'></span> &#8457</p>
-                <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457</p>
+                <p>High: <span id='high_temp'></span> &#8457;</p>
+                <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457;</p>
                 <p>Humidity: <span id="cur_humidity">&nbsp;</span> %</p>
                 <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
             </div>
         </div>
         <br><br>
+        <div class="town_events"></div>
+        <br><br>
         <div class="five_day_forecast">
             <h2>Five Day Forecast</h2>
             <table>
-                <tr>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                </tr>
+                <tr class="table_row_one"></tr>
                 <tr class="row_two_table"></tr>
             </table>
         </div>
-        <br><br>
-        <div class="town_events"></div>
         <br><br>
         <div class="article_div">
             <div id="text_div">
