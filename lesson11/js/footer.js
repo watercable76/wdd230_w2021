@@ -1,3 +1,7 @@
+// load the google font loader
+WebFont.load({google: {families: ["Yusei Magic", "Open Sans", "Monsterrat"]}});
+
+
 function current_date() {
     var d = new Date();
     var date = d.getDate();

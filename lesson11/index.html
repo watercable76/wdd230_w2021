@@ -14,7 +14,9 @@
     <script src="js/footer.js"></script>
     <script src="js/windchill.js"></script>
     <script src="js/display.js" defer></script>
-    <script src="js/townapi.js"></script> 
+    <script src="js/townapi.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
     <!-- CSS styling -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -66,18 +68,18 @@
 
             <!-- Get rid of weather summary since this is the home page -->
 
-            <div class="w_summary">
+            <!-- <div class="w_summary">
                 <h3>Weather summary</h3>
                 <p>Currently: </p>
                 <p>High: <span id='high_temp'>80</span> &#8457;</p>
                 <p>Wind Chill: <span id="wind_chill">&nbsp;</span> &#8457;</p>
                 <p>Humidity: </p>
                 <p>Wind Speed: <span id="wind_speed">15</span> mph</p>
-            </div>
+            </div> -->
         </div><br><br>
         <div class='cards'></div>
         <br><br>
-        <div class="five_day_forecast">
+        <!-- <div class="five_day_forecast">
             <h2>Five Day Forecast</h2>
             <table>
                 <tr>
@@ -105,7 +107,7 @@
                     </th>
                 </tr>
             </table>
-        </div>
+        </div> -->
         <br><br>
         <div class="article_div">
             <div id="text_div">
@@ -127,23 +129,20 @@
 
         <br><br><br><br>
 
-    </main>
-    <footer>
-        <div class="footer_div">
+        <div class="map_div">
             <div class="contact_info">
                 <h3>Contact Information</h3>
                 <p>Idaho News</p>
                 <p>Email: coolio@somestuff.com</p>
                 <p>Phone Number: 111-222-4444</p>
-                <p id="cur_date"></p>
             </div>
             <img id="map_img" src="images/map.jpg" alt="map">
         </div>
+
+    </main>
+    <footer>
+        <p id="cur_date"></p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-        WebFont.load({ google: { families: ["Yusei Magic", "Open Sans", "Monsterrat"] } });
-    </script>
 
 </body>
 
