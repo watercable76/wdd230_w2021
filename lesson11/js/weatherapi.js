@@ -25,7 +25,7 @@
 
 // set days of the week automatically
 
-function current_date(day) {
+function current_day(day) {
 
     // check and set day as the string value
     switch (day) {
@@ -79,10 +79,41 @@ switch (x) {
 
 const ApiURL = `https://api.openweathermap.org/data/2.5/forecast?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
 
+const weatherURL = `https://api.openweathermap.org/data/2.5/weather?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
+console.log(weatherURL);
+
+
 
 function wind_chill(temp, wind) {
     return (35.74 + 0.6125 * temp - (35.75 * wind ** 0.16) + 0.4275 * temp * wind ** 0.16).toFixed(0);
 }
+
+
+fetch(weatherURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+            console.log(jsonObject.main);
+            var cur_condition = jsonObject.weather[0].description;
+            cur_condition = cur_condition.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+            var cur_temp = jsonObject.main.temp;
+            console.log(cur_temp);
+
+            var high_temp = jsonObject.main.temp_max;
+            var cur_humidity = jsonObject.main.humidity;
+            var wind_speed = jsonObject.wind.speed;
+
+            // set all of the values now
+            document.getElementById('cur_condition').textContent = cur_condition;
+            document.getElementById('cur_temp').textContent = cur_temp;
+            document.getElementById('high_temp').textContent = high_temp;
+            document.getElementById('wind_chill').textContent = wind_chill(high_temp, wind_speed);
+            document.getElementById('cur_humidity').textContent = cur_humidity;
+            document.getElementById('wind_speed').textContent = wind_speed;
+    });
+
+
 
 fetch(ApiURL)
     .then(function (response) {
@@ -98,43 +129,20 @@ fetch(ApiURL)
         var count = day;
 
         for (let i = 0; i < 5; i++) {
-            // console.log(current_date(count));
-            let day = current_date(count);
-            // console.log(day);
-
+            let day = current_day(count);
             let p = document.createElement('p');
             p.textContent = day;
 
             let th = document.createElement('th');
             th.appendChild(p);
 
-            // console.log(th);
-
             if (count == 6) { count = 0; }
             else { count++; }
-
             document.querySelector('tr.table_row_one').appendChild(th);
         }
 
 
-
         for (let i = 0; i < jsonObject.list.length; i++) {
-            if (i === 0) {
-                console.log(jsonObject.list[i].weather[0].description);
-                var cur_condition = jsonObject.list[i].weather[0].description;
-                cur_condition = cur_condition.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
-
-                var high_temp = jsonObject.list[i].main.temp_max;
-                var cur_humidity = jsonObject.list[i].main.humidity;
-                var wind_speed = jsonObject.list[i].wind.speed;
-
-                // set all of the values now
-                document.getElementById('cur_condition').textContent = cur_condition;
-                document.getElementById('high_temp').textContent = high_temp;
-                document.getElementById('wind_chill').textContent = wind_chill(high_temp, wind_speed);
-                document.getElementById('cur_humidity').textContent = cur_humidity;
-                document.getElementById('wind_speed').textContent = wind_speed;
-            }
 
             var str = jsonObject.list[i].dt_txt;
             if (str.slice(-8) === '18:00:00') {
