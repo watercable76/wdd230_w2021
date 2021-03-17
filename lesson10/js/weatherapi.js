@@ -77,7 +77,7 @@ switch (x) {
 }
 
 
-const ApiURL = `http://api.openweathermap.org/data/2.5/forecast?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
+const ApiURL = `https://api.openweathermap.org/data/2.5/forecast?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
 
 
 function wind_chill(temp, wind) {
