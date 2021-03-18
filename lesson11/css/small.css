@@ -158,9 +158,9 @@ th {
     float: none;
 }
 
-#fall_img {
-    height: 25%;
-    width: 35%;
+.article_img {
+    /* height: 20%; */
+    width: 75%;
 }
 
 /* banner formatting */

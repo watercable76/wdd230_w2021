@@ -46,20 +46,6 @@
         font-size: inherit;
     }
 
-    /* .cards_section:nth-child(odd) .card_div_text {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .cards_section:nth-child(even) .json_fig_imgs {
-        grid-column: 1;
-    }
-
-    .cards_section:nth-child(even) .card_div_text {
-        grid-column: 2;
-        grid-row: 1;
-    } */
-
     section:nth-child(n) {
         grid-column-start: 1;
         grid-column-end: 4;
