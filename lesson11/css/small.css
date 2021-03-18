@@ -45,7 +45,6 @@ nav {
 
 /* Non-nav styling */
 body {
-    /* max-width: 80%; */
     font-family: 'Yusei Magic', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
 }
 
@@ -58,7 +57,6 @@ main {
 
 
 header {
-    /* display: block; */
     padding: 10px;
     margin: 0;
     background-color: rgba(168, 162, 162, 0.918);
@@ -157,7 +155,6 @@ th {
     background-color: rgb(161, 159, 159);
     border: black;
     padding: 10px;
-    /* display: block; */
     float: none;
 }
 
@@ -179,8 +176,6 @@ th {
 
 /* Logo formatting */
 .logo {
-    /* display: flex; */
-    /* float: left; */
     width: 75%;
     height: 75%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -215,9 +210,7 @@ figure:nth-child(n) {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* box-shadow: 5px 5px grey; */
     border: 0.5px solid black;
-    /* margin: 15px auto; */
     padding: 0;
     opacity: 1;
     transition: opacity 2s;
@@ -246,14 +239,7 @@ input:not([type='radio']) {
 }
 
 fieldset {
-    /* margin-inline-start: 0;
-    margin-inline-end: 0; */
-    /* padding-block-start: 0;
-    padding-block-end: 0;
-    padding-inline-start: 0;
-    padding-inline-end: 0; */
     border: none;
-    /* min-inline-size: min-content; */
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -313,6 +299,11 @@ section:nth-child(n) {
 
 
 /* add an events css for the towns */
+.events_header {
+    text-decoration: underline yellow;
+    text-underline-offset: 0.25em;
+}
+
 .events_div {
     margin-left: auto;
     margin-right: auto;
@@ -324,4 +315,5 @@ section:nth-child(n) {
 
     color: rgb(238, 238, 238);
     max-width: 75%;
+    font-size: 90%;
 }

@@ -73,8 +73,9 @@ fetch(requestURL)
 
 
             // create header element
-            let h3 = document.createElement('h3');
-            h3.textContent = 'Upcoming Events';
+            let h2 = document.createElement('h2');
+            h2.textContent = 'Upcoming Events';
+            h2.setAttribute('class', 'events_header');
 
 
             const x = document.getElementsByTagName('title')[0].textContent;
@@ -87,7 +88,7 @@ fetch(requestURL)
             }
 
             // append header before adding the events themselves
-            div.appendChild(h3);
+            div.appendChild(h2);
 
             for (let i = 0; i < list.length; i++) {
                 let p = document.createElement('p');
