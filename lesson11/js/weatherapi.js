@@ -126,11 +126,12 @@ fetch(ApiURL)
         // set the day of the week for the five day forecast
         for (let i = 0; i < 5; i++) {
             let day = current_day(count);
-            let p = document.createElement('h5');
-            p.textContent = day;
+            // made into header element -> wave tool said to
+            let h = document.createElement('h5');
+            h.textContent = day;
 
             let th = document.createElement('th');
-            th.appendChild(p);
+            th.appendChild(h);
 
             if (count == 6) { count = 0; }
             else { count++; }
@@ -155,11 +156,12 @@ fetch(ApiURL)
                 img.setAttribute('class', 'five_day_icon');
 
                 // create the span to hold the temp
-                let p = document.createElement('p');
-                p.textContent = (jsonObject.list[i].main.temp).toFixed(0) + '\u00B0F';
+                // made into header -> wave tool said to
+                let h = document.createElement('h5');
+                h.textContent = (jsonObject.list[i].main.temp).toFixed(0) + '\u00B0F';
 
                 th.appendChild(img);
-                th.appendChild(p);
+                th.appendChild(h);
 
                 document.querySelector('tr.row_two_table').appendChild(th);
             }
