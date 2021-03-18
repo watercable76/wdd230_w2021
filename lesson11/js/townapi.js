@@ -9,8 +9,8 @@ fetch(requestURL)
         return response.json();
     })
     .then(function (jsonObject) {
-        console.table(jsonObject); // temporary checking for valid response and data parsing
-        console.log("Inside api call");
+        // console.table(jsonObject); // temporary checking for valid response and data parsing
+        // console.log("Inside api call");
 
         const towns = jsonObject['towns'];
 
@@ -40,8 +40,6 @@ fetch(requestURL)
                     img.setAttribute('class', 'fig_imgs');
                     figure.appendChild(img);
 
-
-
                     h2.textContent = name;
                     span.textContent = towns[i].motto;
                     p1.textContent = "Year Founded: " + towns[i].yearFounded;
@@ -68,14 +66,36 @@ fetch(requestURL)
                 }
             }
         } else if (page_selection === 'Preston' || page_selection === 'Soda Springs' || page_selection === 'Fish Haven') {
-            console.log('Else if');
+            // console.log('Else if');
+            // create the div to hold the data
+            let div = document.createElement('div');
+            div.setAttribute('class', 'events_div');
+
+
             // create header element
             let h3 = document.createElement('h3');
             h3.textContent = 'Upcoming Events';
 
 
-            // append all elements to the div in the page 
-            document.querySelector('div.town_events').appendChild(h3);
+            const x = document.getElementsByTagName('title')[0].textContent;
+            let list = [];
+
+            for (let i = 0; i < towns.length; i++) {
+                if (towns[i].name === x) {
+                    list = towns[i].events;
+                }
+            }
+
+            // append header before adding the events themselves
+            div.appendChild(h3);
+
+            for (let i = 0; i < list.length; i++) {
+                let p = document.createElement('p');
+                p.textContent = list[i];
+                div.appendChild(p);
+            }
+
+            document.querySelector('div.town_events').appendChild(div);
         }
 
 

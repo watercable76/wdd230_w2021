@@ -57,7 +57,7 @@ function current_day(day) {
 
 
 const x = document.getElementsByTagName('title')[0].textContent;
-console.log(x);
+// console.log(x);
 
 var city_id = 0;
 
@@ -76,12 +76,9 @@ switch (x) {
         break;
 }
 
-
+// api's for forecast and weather
 const ApiURL = `https://api.openweathermap.org/data/2.5/forecast?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
-
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?id=${city_id}&appid=07edcaccc064119c281855eedd314fc9&units=imperial`;
-console.log(weatherURL);
-
 
 
 function wind_chill(temp, wind) {
@@ -94,11 +91,9 @@ fetch(weatherURL)
         return response.json();
     })
     .then(function (jsonObject) {
-            console.log(jsonObject.main);
             var cur_condition = jsonObject.weather[0].description;
             cur_condition = cur_condition.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
             var cur_temp = jsonObject.main.temp;
-            console.log(cur_temp);
 
             var high_temp = jsonObject.main.temp_max;
             var cur_humidity = jsonObject.main.humidity;
