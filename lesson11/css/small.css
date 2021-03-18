@@ -194,7 +194,7 @@ th {
     grid-gap: 15px;
 }
 
-figure:nth-child(n) {
+.gallery:nth-child(n) {
     grid-column-start: 1;
     grid-column-end: 3;
 }
@@ -203,10 +203,10 @@ figure:nth-child(n) {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
-.gallery img {
+.gallery .inside_div img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -221,7 +221,7 @@ img[data-src] {
 }
 
 figure {
-    background-color: pink;
+    /* background-color: pink; */
     border: #545454 solid;
 }
 

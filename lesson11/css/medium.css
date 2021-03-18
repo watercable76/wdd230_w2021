@@ -116,20 +116,20 @@
     .gallery_imgs {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        grid-gap: 15px;
+        grid-gap: 30px;
     }
 
-    figure:nth-child(n) {
+    .gallery:nth-child(n) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
 
-    figure:nth-child(2n) {
+    .gallery:nth-child(2n) {
         grid-column-start: 3;
         grid-column-end: 5;
     }
 
-    figure:nth-child(9) {
+    .gallery:nth-child(9) {
         grid-column-start: 1;
         grid-column-end: 5;
     }
