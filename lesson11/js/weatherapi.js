@@ -123,9 +123,10 @@ fetch(ApiURL)
         var day = d.getDay();
         var count = day;
 
+        // set the day of the week for the five day forecast
         for (let i = 0; i < 5; i++) {
             let day = current_day(count);
-            let p = document.createElement('p');
+            let p = document.createElement('h5');
             p.textContent = day;
 
             let th = document.createElement('th');
@@ -137,6 +138,7 @@ fetch(ApiURL)
         }
 
 
+        // adding table images and max temp for the day
         for (let i = 0; i < jsonObject.list.length; i++) {
 
             var str = jsonObject.list[i].dt_txt;
