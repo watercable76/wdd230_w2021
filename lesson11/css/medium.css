@@ -1,5 +1,9 @@
 @media only screen and (min-width: 32.5em) {
 
+    .active {
+        background-color: blue;
+    }
+
     /* Footer formatting */
     footer {
         border-radius: 15px;

@@ -1,5 +1,5 @@
 // load the google font loader
-WebFont.load({google: {families: ["Yusei Magic", "Open Sans", "Monsterrat"]}});
+WebFont.load({ google: { families: ["Yusei Magic", "Open Sans", "Monsterrat"] } });
 
 
 function current_date() {
