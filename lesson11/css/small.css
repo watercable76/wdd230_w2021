@@ -305,7 +305,7 @@ section:nth-child(n) {
 /* add an events css for the towns */
 .events_header {
     text-decoration: underline yellow;
-    text-underline-offset: 0.25em;
+    /* text-underline-offset: 1em; */
 }
 
 .events_div {
